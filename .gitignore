@@ -1,1 +1,21 @@
-.idea
+# Configurações do editor
+.idea/
+.vscode/
+
+# Dependências do Laravel
+/node_modules/
+/vendor/
+
+# Storage e Cache
+/public/storage/
+/storage/oauth-private.key
+/storage/oauth-public.key
+/storage/framework/*
+/storage/logs/*
+/bootstrap/cache/*
+
+# Arquivos de ambiente (sensíveis)
+.env
+.env.local
+.env.testing
+.env.production
