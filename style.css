@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .bg {
-    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background: url(background.jpg) no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -89,6 +89,7 @@
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
 }
+
 .logo {
     position: absolute;
     top: 40%;
