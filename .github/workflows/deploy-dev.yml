@@ -1,16 +1,25 @@
-name: Deploy Dev to VPS
+name: CI
 
 on:
   push:
     branches:
-      - dev
+      - [dev]
 
 jobs:
-  deploy:
+  CI:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 23
+
+    steps:
+      - name: Execute on VPS via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -20,5 +29,5 @@ jobs:
             cd /var/www/website-dev
             git pull
             npm install
-            pm2 startOrRestart ecosystem.config.cjs
+#            pm2 startOrRestart ecosystem.config.cjs
             echo "Update and restart completed successfully."
