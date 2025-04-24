@@ -7,7 +7,7 @@
               text-[14px] text-fuchsia-500 max-w-[80%] [text-shadow:2px_2px_10px_rgba(255,0,255,0.8)]"
   >
     <p>
-      testeeeeeeeee
+      teste CI
     </p>
     <p>
       O site que sua loja precisa, com pedidos direto no WhatsApp!
