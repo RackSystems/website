@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-6xl mx-auto space-y-20">
-    <div class="flex flex-row items-center justify-center h-screen mx-auto">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-row items-center justify-center min-h-[90vh] mx-auto">
       <div class="text-white space-y-4">
         <h1 class="text-3xl text-bold">design, tecnologia e IA com a pegada da Rack</h1>
         <p class="text-lg">
@@ -18,7 +18,7 @@
       <img src="/images/logo.png" class="w-1/2" alt="Logo Rack Systems"/>
     </div>
 
-    <div class="flex flex-row gap-10">
+    <div class="flex flex-row gap-10 hidden">
       <Box
           title="sites sob medida"
           content="desenvolvemos sistemas web, chatbots, plataformas de atendimento (tickets), integrações com APIs e muito mais. Tudo personalizado para o que sua empresa realmente precisa."
@@ -33,7 +33,7 @@
       />
     </div>
 
-    <div class="flex flex-col items-center justify-center w-11/12 md:w-8/12 mx-auto text-white gap-2">
+    <div class="flex flex-col items-center justify-center w-11/12 md:w-8/12 mx-auto text-white gap-2 hidden">
       <div class="flex flex-row items-center gap-4">
         <img src="/images/msn.webp" alt="" class="w-10"/>
         <h1 class="text-2xl font-bold">vamos conversar?</h1>
@@ -52,7 +52,7 @@
       </form>
     </div>
 
-    <footer class="flex items-center justify-center h-24 text-white">
+    <footer class="flex items-center justify-center h-24 text-white mt-4">
       <p>feito pelos devs da RackSystems</p>
     </footer>
   </div>
