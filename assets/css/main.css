@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 .bg {
-    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background: url('/images/background.jpg') no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
