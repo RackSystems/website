@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row items-center justify-center min-h-[90vh] mx-auto px-4 gap-8">
+    <div class="flex flex-col md:flex-row items-center justify-center h-screen mx-auto px-4 gap-8">
       <div class="text-white space-y-4 max-w-xl order-2 md:order-1">
         <h1 class="text-2xl md:text-3xl lg:text-4xl text-bold text-center md:text-left">design, tecnologia e IA com a pegada da Rack</h1>
         <p class="text-base md:text-lg text-center md:text-left">
@@ -9,7 +9,7 @@
         </p>
 
         <div class="flex justify-center md:justify-start">
-          <a href="#formulario-contato"
+          <a href="https://wa.me/+5567993030625"
              class="border px-4 py-2 mt-2 base-shadow text-sm font-bold bg-white text-black hover:bg-gray-100 transition-colors"
           >
             Entre em contato
@@ -35,7 +35,7 @@
       />
     </div>
 
-    <div class="flex flex-col items-center justify-center w-11/12 md:w-8/12 mx-auto text-white gap-2">
+    <div class="flex flex-col items-center justify-center w-11/12 md:w-8/12 mx-auto text-white gap-2 hidden">
       <div class="flex flex-row items-center gap-4">
         <img src="/images/msn.webp" alt="" class="w-10"/>
         <h1 class="text-2xl font-bold">vamos conversar?</h1>
@@ -90,3 +90,5 @@
   @apply shadow-[0_0_5px_rgba(0,255,255,0.5)]
 }
 </style>
+<script setup lang="ts">
+</script>
