@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+@import "@nuxt/ui";
 
 .bg {
-    background: url(background.jpg) no-repeat;
+    background: url('/images/background.jpg') no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -88,40 +89,4 @@
 }
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
-}
-
-.logo {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.message {
-    position: absolute;
-    top: calc(50% + 80px);
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-    color: #ff00ff;
-    text-shadow: 2px 2px 10px rgba(255, 0, 255, 0.8);
-    max-width: 80%;
-}
-.message a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 12px;
-    color: #00ffff;
-    text-decoration: none;
-    border: 2px solid #00ffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-    transition: all 0.3s ease-in-out;
-}
-.message a:hover {
-    background: #00ffff;
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
 }
