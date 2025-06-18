@@ -1,9 +1,8 @@
 services:
-  nuxt:
+  website:
     build: .
     restart: always
-    ports:
-      - "3000:3000"
+    container_name: website
     environment:
       NODE_ENV: production
     healthcheck:
@@ -11,3 +10,15 @@ services:
       interval: 60s
       timeout: 5s
       retries: 3
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.website.rule=Host(`racksystems.com.br`)"
+      - "traefik.http.routers.website.entrypoints=websecure"
+      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
+      - "traefik.http.services.website.loadbalancer.server.port=3000"
+
+networks:
+  web:
+    external: true
