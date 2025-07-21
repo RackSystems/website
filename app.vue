@@ -4,6 +4,7 @@
       <NuxtLayout>
         <NuxtPage/>
       </NuxtLayout>
+      <ContactPopup/>
     </UApp>
   </div>
 </template>
