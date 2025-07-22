@@ -1,31 +1,34 @@
-FROM node:22 AS builder
+# Build Stage 1
 
+FROM node:22-alpine AS build
 WORKDIR /app
+
+RUN corepack enable
+
+# Copy package.json and your lockfile
 COPY package.json package-lock.json ./
 
-RUN npm ci --omit=dev
+# Install dependencies
+RUN npm i
 
-COPY . .
+# Copy the entire project
+COPY . ./
 
-RUN npm run build \
-    && npm prune --production
+# Build the project
+RUN npm run build
 
-# Use a multi-stage build to keep the final image small
+# Build Stage 2
+
 FROM node:22-alpine
-
 WORKDIR /app
 
-RUN apk add --no-cache curl \
-    && rm -rf /var/cache/apk/*
+# Only `.output` folder is needed from the build stage
+COPY --from=build /app/.output/ ./
 
-COPY --from=builder /app/.output .output
-COPY --from=builder /app/node_modules node_modules
-COPY --from=builder /app/package.json package.json
-
-ENV NODE_ENV=production
+# Change the port and host
+ENV PORT=80
 ENV HOST=0.0.0.0
-ENV PORT=3000
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["node", ".output/server/index.mjs"]
+CMD ["node", "/app/server/index.mjs"]
