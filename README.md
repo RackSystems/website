@@ -1,75 +1,46 @@
-# Nuxt Minimal Starter
+# Site da Rack
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este é o repositório do site da nossa software house Rack Systems que está acessível em `racksystems.com.br` 🫦.
 
-## Setup
+### Sobre o projeto
 
-Make sure to install dependencies:
+Ele é uma aplicação web bem simples, construída com Nuxt.js. Por enquanto só tem uma página de apresentação da rack e
+uma maneira de entrar em contato conosco.
 
-```bash
-# npm
-npm install
+A ideia é que o site seja um portfólio para mostrar nossos projetos e serviços, além de ser uma forma pra gente estudar,
+principalmente com DevOps :D
 
-# pnpm
-pnpm install
+### Stack
 
-# yarn
-yarn install
+- Nuxt.js (Vue.js + TypeScript)
+- Tailwind CSS
+- Docker
+- CI/CD com GitHub Actions estamos implementando
 
-# bun
-bun install
-```
+## Configurando o ambiente de desenvolvimento
 
-## Development Server
+- Node.js (recomendo deixar ele atualizado)
+- npm, yarn...
 
-Start the development server on `http://localhost:3000`:
+### Instalação
 
-```bash
-# npm
-npm run dev
+1. Clone o repositório
+2. Instale as dependências
+3. Inicie o servidor de desenvolvimento, se for npm é `npm run dev`
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+## Build com Docker
 
 ```bash
-# npm
-npm run build
+# Construindo a imagem
+docker build -t racksystems-website .
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# Executando o container
+docker run -p 3000:3000 racksystems-website
 ```
 
-Locally preview production build:
+#### Próximos passos
 
-```bash
-# npm
-npm run preview
+- Processo de CI/CD com GitHub Actions para automatizar o build e deploy do site
+- Teste automatizados e eslint executados antes do deploy
+- Novas funcionalidades.
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
