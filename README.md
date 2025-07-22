@@ -1,10 +1,8 @@
-# Site da Rack
-
-Este é o repositório do site da nossa software house Rack Systems que está acessível em `racksystems.com.br` 🫦.
+Este é o repositório do site da Rack, que está acessível em `racksystems.com.br` 🫦.
 
 ### Sobre o projeto
 
-Ele é uma aplicação web bem simples, construída com Nuxt.js. Por enquanto só tem uma página de apresentação da rack e
+Ele é uma aplicação web bem simples, construída com Nuxt.js. Por enquanto só tem uma página de apresentação da Rack e
 uma maneira de entrar em contato conosco.
 
 A ideia é que o site seja um portfólio para mostrar nossos projetos e serviços, além de ser uma forma pra gente estudar,
@@ -15,18 +13,18 @@ principalmente com DevOps :D
 - Nuxt.js (Vue.js + TypeScript)
 - Tailwind CSS
 - Docker
-- CI/CD com GitHub Actions estamos implementando
+- CI/CD com GitHub Actions (estamos implementando)
+
+Porque nuxt e não vue puro? O principal motivo é o SSR (Server Side Rendering) que o Nuxt oferece, para testarmos o
+desempenho do SEO.
 
 ## Configurando o ambiente de desenvolvimento
 
-- Node.js (recomendo deixar ele atualizado)
-- npm, yarn...
-
-### Instalação
+Obs: use uma versão atualizado do node.js e um gerenciador de pacotes como npm, yarn...
 
 1. Clone o repositório
 2. Instale as dependências
-3. Inicie o servidor de desenvolvimento, se for npm é `npm run dev`
+3. Inicie o servidor de desenvolvimento. Se for npm é `npm run dev`
 
 ## Build com Docker
 
